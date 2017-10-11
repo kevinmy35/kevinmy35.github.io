@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="neu machine learning">
 <meta property="og:description" content="2017年是公认的人工智能元年。随着计算能力和算法性能的提高，传统机器学习得到了快速的发展，在这里小编my将为大家简单介绍一下机器学习以及如何快速入门。 1. 什么是机器学习? Arthur samuel(1959)：Machine learning is a field of computer science that gives computers the ability to learn w">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-10-10T06:29:40.913Z">
+<meta property="og:updated_time" content="2017-10-11T04:20:03.010Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="machine learning-summary">
 <meta name="twitter:description" content="2017年是公认的人工智能元年。随着计算能力和算法性能的提高，传统机器学习得到了快速的发展，在这里小编my将为大家简单介绍一下机器学习以及如何快速入门。 1. 什么是机器学习? Arthur samuel(1959)：Machine learning is a field of computer science that gives computers the ability to learn w">
@@ -68,6 +68,8 @@
     		
     			
             
+    			
+    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友情链接</a>
     			
             
     			
@@ -170,6 +172,7 @@
 <li>Arthur samuel(1959)：Machine learning is a field of computer science that gives computers the ability to learn without being explicitly programmed.</li>
 <li>Tom mithell(1998):A computer program is said to learn from experience E with respect to some class of tasks T and performance measure P if its performance at tasks in T, as measured by P, improves with experience E.（吴恩达在coursea上曾吐槽他觉得这个定义仅仅是为了押韵）</li>
 </ul>
+<a id="more"></a>
 <h2 id="2-机器学习的分类"><a href="#2-机器学习的分类" class="headerlink" title="2.机器学习的分类"></a>2.机器学习的分类</h2><ul>
 <li>监督学习（supervised learning）<br>线性回归（linear regression)<br>逻辑斯蒂回归（logistic regression)<br>神经网络（neural network)<br>SVMs</li>
 <li>半监督学习（semi-supervised learning)<br>自训练算法 (self training)<br>生成模型 (generative models)<br>图论方法  (graph-basedmethods）</li>
@@ -419,6 +422,8 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
       
     
       
+      
+      
     
       
       
@@ -432,9 +437,11 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
       
         
       
+      <li style="width: 50%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">友情链接</a></li>
+      
         
       
-      <li style="width: 100%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
+      <li style="width: 50%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
       
         
     </ul>
@@ -443,11 +450,31 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
     
 
     
+    	<section class="tools-section tools-section-friends" q-show="friends">
+  		
+        <ul class="search-ul">
+          
+            <li class="search-li">
+              <a href="http://www.neu.edu.cn" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>东北大学</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://www.google.com" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>谷歌</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://www.baidu.com" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>百度</a>
+            </li>
+          
+        </ul>
+  		
+    	</section>
+    
 
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">&lt;br&gt;A student major in automation and machine learning in NEU China&lt;br&gt;</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">A student major in automation and machine learning in NEU China</div>
   	  	
     	</section>
     

@@ -67,6 +67,8 @@
     			
             
     			
+    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友情链接</a>
+    			
             
     			
     			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>
@@ -170,29 +172,9 @@
 <li>Arthur samuel(1959)：Machine learning is a field of computer science that gives computers the ability to learn without being explicitly programmed.</li>
 <li>Tom mithell(1998):A computer program is said to learn from experience E with respect to some class of tasks T and performance measure P if its performance at tasks in T, as measured by P, improves with experience E.（吴恩达在coursea上曾吐槽他觉得这个定义仅仅是为了押韵）</li>
 </ul>
-<h2 id="2-机器学习的分类"><a href="#2-机器学习的分类" class="headerlink" title="2.机器学习的分类"></a>2.机器学习的分类</h2><ul>
-<li>监督学习（supervised learning）<br>线性回归（linear regression)<br>逻辑斯蒂回归（logistic regression)<br>神经网络（neural network)<br>SVMs</li>
-<li>半监督学习（semi-supervised learning)<br>自训练算法 (self training)<br>生成模型 (generative models)<br>图论方法  (graph-basedmethods）</li>
-<li>无监督学习（unsupervised learning)<br>K-means<br>PCA</li>
-<li>其他<br>Reinforcement learning<br>DNN<br>RNN/LSTM<br>CNN<br>Reconmender systems<br>Deep Reinforcement learning</li>
-</ul>
-<hr>
-<h2 id="3-书籍和相关教学视频推荐"><a href="#3-书籍和相关教学视频推荐" class="headerlink" title="3.书籍和相关教学视频推荐"></a>3.书籍和相关教学视频推荐</h2><p> 书籍</p>
-<hr>
-<p>国内：<br>这两本书是国内真正懂机器学习的人推出的经典之作，如果你没能力看外文原版书籍，又不能忍受翻译过来的死板带来的不快，那小编强烈推荐这两本书来进行入门</p>
-<ul>
-<li>《统计学习方法》-李航</li>
-<li>《机器学习》-周志华（西瓜书）</li>
-</ul>
-<hr>
-<p>国外：<br>《pattern recognition and machine learning》业内简称PRML，有中文翻译版本，但不是官方授权翻译。中文翻译版本是哈工大某实验室的一位研究生所翻译的。本书是经典之作，推荐阅读</p>
-<hr>
-<p>教学视频</p>
-<hr>
-<p>首推吴恩达的机器学习视频：<br>coursea地址：<a href="https://zh.coursera.org/learn/machine-learning" target="_blank" rel="external">coursea上的机器学习视频</a><br>B站地址：<a href="https://www.bilibili.com/video/av9912938/?from=search&amp;seid=11737975212222756917" target="_blank" rel="external">B站机器学习视频</a><br>当然网易云公开课也有吴恩达的机器学习公开课，但是年份有点久远，这里小编就不贴地址的，需要的同学自行搜索。</p>
-<p>其次推荐台湾大学李宏毅的机器学习视频，浓浓的台湾腔，把课讲得十分有趣形象但也不缺严谨性：<br><a href="http://speech.ee.ntu.edu.tw/~tlkagk/courses.html" target="_blank" rel="external">台湾大学机器学习视频</a></p>
-<hr>
-
+        
+          <a class="article-more-a" href="/2017/10/10/machine-learning-summary/#more">more >></a>
+        
       
 
       
@@ -368,6 +350,8 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
       
     
       
+      
+      
     
       
       
@@ -381,9 +365,11 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
       
         
       
+      <li style="width: 50%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">友情链接</a></li>
+      
         
       
-      <li style="width: 100%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
+      <li style="width: 50%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
       
         
     </ul>
@@ -392,11 +378,31 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
     
 
     
+    	<section class="tools-section tools-section-friends" q-show="friends">
+  		
+        <ul class="search-ul">
+          
+            <li class="search-li">
+              <a href="http://www.neu.edu.cn" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>东北大学</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://www.google.com" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>谷歌</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://www.baidu.com" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>百度</a>
+            </li>
+          
+        </ul>
+  		
+    	</section>
+    
 
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">&lt;br&gt;A student major in automation and machine learning in NEU China&lt;br&gt;</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">A student major in automation and machine learning in NEU China</div>
   	  	
     	</section>
     
