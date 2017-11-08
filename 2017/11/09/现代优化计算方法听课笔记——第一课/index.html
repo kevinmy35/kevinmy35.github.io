@@ -9,14 +9,14 @@
   <title>《现代优化计算方法》听课笔记——第一课 | neu machine learning</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="课程概况  任课教师系统工程研究所：王大志Email:wangdazhi1@ise.neu.edu.cnTel:18002455565 课程结构一、绪论二、禁忌搜索算法三、遗传算法四、模拟退火算法五、粒子群优化算法六、蚁群优化算法 参考书籍1.《现代优化计算方法（第二版）》 刑文训 谢金星 编著  清华大学出版社（几乎绝版，淘宝价格200左右，所以请各位同学自行解决）">
-<meta name="keywords" content="听课笔记">
+<meta name="keywords" content="听课笔记，现代优化算法">
 <meta property="og:type" content="article">
 <meta property="og:title" content="《现代优化计算方法》听课笔记——第一课">
 <meta property="og:url" content="http://neuml.com/2017/11/09/现代优化计算方法听课笔记——第一课/index.html">
 <meta property="og:site_name" content="neu machine learning">
 <meta property="og:description" content="课程概况  任课教师系统工程研究所：王大志Email:wangdazhi1@ise.neu.edu.cnTel:18002455565 课程结构一、绪论二、禁忌搜索算法三、遗传算法四、模拟退火算法五、粒子群优化算法六、蚁群优化算法 参考书籍1.《现代优化计算方法（第二版）》 刑文训 谢金星 编著  清华大学出版社（几乎绝版，淘宝价格200左右，所以请各位同学自行解决）">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-11-08T14:51:21.829Z">
+<meta property="og:updated_time" content="2017-11-08T15:06:36.433Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="《现代优化计算方法》听课笔记——第一课">
 <meta name="twitter:description" content="课程概况  任课教师系统工程研究所：王大志Email:wangdazhi1@ise.neu.edu.cnTel:18002455565 课程结构一、绪论二、禁忌搜索算法三、遗传算法四、模拟退火算法五、粒子群优化算法六、蚁群优化算法 参考书籍1.《现代优化计算方法（第二版）》 刑文训 谢金星 编著  清华大学出版社（几乎绝版，淘宝价格200左右，所以请各位同学自行解决）">
@@ -180,8 +180,75 @@
 <ol>
 <li><strong>0-1背包问题（knapsack problem)</strong><br>Java代码：</li>
 </ol>
-<pre><code>package knapsack;
-</code></pre><p>//现有背包容量为200kg<br>//物品的重量和价值如下：<br>// 20kg–20<br>// 25kg–20<br>// 35kg–50<br>// 40kg–50<br>// 50kg–45<br>// 60kg–45<br>// 70kg–55<br>public class GreedyAlgorithm {<br>    public double[] weight = new double[] {20, 25, 35, 40, 50, 60, 70};//定义重量的数组<br>    public double[] value = new double[] {20, 20, 50, 50, 45, 45, 55};//定义价值的数组<br>    public int capacity = 200;//定义背包容量<br>    public void knapsack1(){<br>        int size = weight.length; //获取重量数组的长度<br>        int[] tags = new int[size];//定义顺序数组<br>        double[] vw = new double[size];//定义性价比数组<br>        for(int i=0;i<size;i++){ vw[i]="value[i]/weight[i];//算出性价比" tags[i]="i;//得到初始的排序" }="" 冒泡排序，得到性价比从小到大的数组="" for(int="" i="0;i<size;i++){" j="i+1;j<size;j++){" if(vw[i]="">vw[j]){<br>                    double change =vw[i];<br>                    vw[i] = vw[j];<br>                    vw[j] = change;<br>                    //得到按照性价比大小的排序<br>                    int tag = tags[i];<br>                    tags[i] = tags[j];<br>                    tags[j] = tag;<br>                }<br>            }<br>        }<br>        //贪心算法<br>        for(int i=size-1;i&gt;=0;i–){<br>            if(vw[i]&lt;capacity){<br>                System.out.println(“添加物品:” + weight[tags[i]]);//以重量作为标注进行输出<br>                capacity -= weight[tags[i]];<br>            }<br>        }<br>    }<br>    public static void main(String[] args) {<br>        GreedyAlgorithm gda = new GreedyAlgorithm();<br>        gda.knapsack1();<br>    }<br>}</size;i++){></p>
+<hr>
+<p>title: 《现代优化计算方法》听课笔记——第一课<br>date: 2017-11-08 21:14:34<br>tags: [听课笔记]</p>
+<hr>
+<h2 id="课程概况-1"><a href="#课程概况-1" class="headerlink" title="课程概况"></a>课程概况</h2><hr>
+<ol>
+<li><strong>任课教师</strong><br>系统工程研究所：王大志<br>Email:wangdazhi1@ise.neu.edu.cn<br>Tel:18002455565</li>
+<li><strong>课程结构</strong><br>一、绪论<br>二、禁忌搜索算法<br>三、遗传算法<br>四、模拟退火算法<br>五、粒子群优化算法<br>六、蚁群优化算法</li>
+<li><strong>参考书籍</strong><br>1.《现代优化计算方法（第二版）》 刑文训 谢金星 编著  清华大学出版社（几乎绝版，淘宝价格200左右，所以请各位同学自行解决）<!--more-->
+2.《智能优化方法》 汪定伟 编著  高等教育出版社  <a href="https://detail.tmall.com/item.htm?spm=a230r.1.14.1.12575727x27UyV&amp;id=557227889116&amp;ns=1&amp;abbucket=4" target="_blank" rel="external">淘宝链接</a> </li>
+<li><strong>考评形式</strong><br>课程出勤：20%<br>平时练习：20%<br>项目报告：60%（初步定在18周周五之前上交）</li>
+</ol>
+<hr>
+<h2 id="绪论-1"><a href="#绪论-1" class="headerlink" title="绪论"></a>绪论</h2><hr>
+<ol>
+<li><strong>0-1背包问题（knapsack problem)</strong><br>Java代码：<br><code></code></li>
+</ol>
+<hr>
+<p>title: 《现代优化计算方法》听课笔记——第一课<br>date: 2017-11-08 21:14:34<br>tags: [听课笔记]</p>
+<hr>
+<h2 id="课程概况-2"><a href="#课程概况-2" class="headerlink" title="课程概况"></a>课程概况</h2><hr>
+<ol>
+<li><strong>任课教师</strong><br>系统工程研究所：王大志<br>Email:wangdazhi1@ise.neu.edu.cn<br>Tel:18002455565</li>
+<li><strong>课程结构</strong><br>一、绪论<br>二、禁忌搜索算法<br>三、遗传算法<br>四、模拟退火算法<br>五、粒子群优化算法<br>六、蚁群优化算法</li>
+<li><strong>参考书籍</strong><br>1.《现代优化计算方法（第二版）》 刑文训 谢金星 编著  清华大学出版社（几乎绝版，淘宝价格200左右，所以请各位同学自行解决）<!--more-->
+2.《智能优化方法》 汪定伟 编著  高等教育出版社  <a href="https://detail.tmall.com/item.htm?spm=a230r.1.14.1.12575727x27UyV&amp;id=557227889116&amp;ns=1&amp;abbucket=4" target="_blank" rel="external">淘宝链接</a> </li>
+<li><strong>考评形式</strong><br>课程出勤：20%<br>平时练习：20%<br>项目报告：60%（初步定在18周周五之前上交）</li>
+</ol>
+<hr>
+<h2 id="绪论-2"><a href="#绪论-2" class="headerlink" title="绪论"></a>绪论</h2><hr>
+<ol>
+<li><strong>0-1背包问题（knapsack problem)</strong><br>Java代码:<br>package knapsack;<br>//现有背包容量为200kg<br>//物品的重量和价值如下：<br>// 20kg–20<br>// 25kg–20<br>// 35kg–50<br>// 40kg–50<br>// 50kg–45<br>// 60kg–45<br>// 70kg–55<br>public class GreedyAlgorithm {<pre><code>public double[] weight = new double[] {20, 25, 35, 40, 50, 60, 70};//定义重量的数组
+public double[] value = new double[] {20, 20, 50, 50, 45, 45, 55};//定义价值的数组
+public int capacity = 200;//定义背包容量
+public void knapsack1(){
+    int size = weight.length; //获取重量数组的长度
+    int[] tags = new int[size];//定义顺序数组
+    double[] vw = new double[size];//定义性价比数组
+    for(int i=0;i&lt;size;i++){
+        vw[i] = value[i]/weight[i];//算出性价比
+        tags[i] = i;//得到初始的排序
+      }
+     //冒泡排序，得到性价比从小到大的数组
+    for(int i=0;i&lt;size;i++){
+        for(int j=i+1;j&lt;size;j++){
+            if(vw[i]&gt;vw[j]){
+                double change =vw[i];
+                vw[i] = vw[j];
+                vw[j] = change;
+                //得到按照性价比大小的排序
+                int tag = tags[i];
+                 tags[i] = tags[j];
+                tags[j] = tag;
+            }
+        }
+    }
+    //贪心算法
+    for(int i=size-1;i&gt;=0;i--){
+        if(vw[i]&lt;capacity){
+            System.out.println(&quot;添加物品:&quot; + weight[tags[i]]);//以重量作为标注进行输出
+            capacity -= weight[tags[i]];
+        }
+    }    
+}
+public static void main(String[] args) {
+    GreedyAlgorithm gda = new GreedyAlgorithm();
+    gda.knapsack1();
+}
+</code></pre>}</li>
+</ol>
 
       
 
@@ -226,7 +293,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">听课笔记</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">听课笔记，现代优化算法</a>
         		</li>
       		
 		</ul>
@@ -325,7 +392,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#课程概况"><span class="toc-number">1.</span> <span class="toc-text">课程概况</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#绪论"><span class="toc-number">2.</span> <span class="toc-text">绪论</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#课程概况"><span class="toc-number">1.</span> <span class="toc-text">课程概况</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#绪论"><span class="toc-number">2.</span> <span class="toc-text">绪论</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#课程概况-1"><span class="toc-number">3.</span> <span class="toc-text">课程概况</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#绪论-1"><span class="toc-number">4.</span> <span class="toc-text">绪论</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#课程概况-2"><span class="toc-number">5.</span> <span class="toc-text">课程概况</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#绪论-2"><span class="toc-number">6.</span> <span class="toc-text">绪论</span></a></li></ol>
                     </div>
                 </span>
             </div>
