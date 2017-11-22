@@ -6,18 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://neuml.com">
-  <title>Archives | neu machine learning</title>
+  <title>现代优化计算方法--背包问题 | neu machine learning</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="a space where anyone can discuss the machine learning including deep learning">
-<meta property="og:type" content="website">
-<meta property="og:title" content="neu machine learning">
-<meta property="og:url" content="http://neuml.com/archives/index.html">
+  <meta name="description" content="123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263import xlrdimport numpy as np from numpy import float64 &apos;&apos;&apos; read excel 读取价值和重量的数据&apos;&apos;">
+<meta name="keywords" content="背包问题,Python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="现代优化计算方法--背包问题">
+<meta property="og:url" content="http://neuml.com/2017/11/23/blog/index.html">
 <meta property="og:site_name" content="neu machine learning">
-<meta property="og:description" content="a space where anyone can discuss the machine learning including deep learning">
+<meta property="og:description" content="123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263import xlrdimport numpy as np from numpy import float64 &apos;&apos;&apos; read excel 读取价值和重量的数据&apos;&apos;">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-11-22T14:45:40.389Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="neu machine learning">
-<meta name="twitter:description" content="a space where anyone can discuss the machine learning including deep learning">
+<meta name="twitter:title" content="现代优化计算方法--背包问题">
+<meta name="twitter:description" content="123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263import xlrdimport numpy as np from numpy import float64 &apos;&apos;&apos; read excel 读取价值和重量的数据&apos;&apos;">
   
     <link rel="alternative" href="/atom.xml" title="neu machine learning" type="application/atom+xml">
   
@@ -145,36 +147,65 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-blog" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/23/blog/" class="archive-article-date">
-  	<time datetime="2017-11-22T22:42:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-22</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/23/blog/">现代优化计算方法--背包问题</a>
+    <h1 class="article-title" itemprop="name">
+      现代优化计算方法--背包问题
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2017/11/23/blog/" class="archive-article-date">
+  	<time datetime="2017-11-22T22:42:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> xlrd</div><div class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np </div><div class="line"><span class="keyword">from</span> numpy <span class="keyword">import</span> float64 </div><div class="line"><span class="string">''' read excel 读取价值和重量的数据'''</span></div><div class="line">cnt = <span class="number">0</span></div><div class="line">data = xlrd.open_workbook(<span class="string">'/home/mouye/1.xlsx'</span>)    </div><div class="line">table = data.sheets()[<span class="number">0</span>]  </div><div class="line">nrows = table.nrows</div><div class="line">ncols = table.ncols</div><div class="line">capacity = np.array([<span class="number">5555</span>])</div><div class="line">w=np.arange(nrows,dtype=float64).reshape(<span class="number">1</span>,nrows)</div><div class="line">v=np.arange(nrows,dtype=float64).reshape(<span class="number">1</span>,nrows)</div><div class="line">c=np.zeros(nrows).reshape(<span class="number">1</span>,nrows)</div><div class="line">vw=np.arange(nrows,dtype=float64).reshape(<span class="number">1</span>,nrows)</div><div class="line">tags=np.arange(nrows).reshape(<span class="number">1</span>,nrows)</div><div class="line"><span class="string">''' get value/weight 性价比'''</span></div><div class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(nrows):</div><div class="line">    w[<span class="number">0</span>,i] = table.cell(i,<span class="number">0</span>).value</div><div class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(nrows):</div><div class="line">    v[<span class="number">0</span>,i] = table.cell(i,<span class="number">1</span>).value</div><div class="line">    vw[<span class="number">0</span>,i] = v[<span class="number">0</span>,i]/w[<span class="number">0</span>,i]</div><div class="line">    tags[<span class="number">0</span>,i] = i</div><div class="line"><span class="string">''' sort them 冒泡排序'''</span></div><div class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(nrows):</div><div class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> range(i+<span class="number">1</span>,nrows):</div><div class="line">        <span class="keyword">if</span> vw[<span class="number">0</span>,i]&lt;vw[<span class="number">0</span>,j]:</div><div class="line">            t=vw[<span class="number">0</span>,i]</div><div class="line">            vw[<span class="number">0</span>,i]=vw[<span class="number">0</span>,j]</div><div class="line">            vw[<span class="number">0</span>,j]=t</div><div class="line"></div><div class="line">            tag = tags[<span class="number">0</span>,i]</div><div class="line">            tags[<span class="number">0</span>,i] = tags[<span class="number">0</span>,j]</div><div class="line">            tags[<span class="number">0</span>,j] = tag</div><div class="line"><span class="string">''' 贪心算法 '''</span></div><div class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(nrows):</div><div class="line">    <span class="keyword">if</span> capacity[<span class="number">0</span>]&gt;=<span class="number">0</span>:</div><div class="line">        m=tags[<span class="number">0</span>,i]</div><div class="line">        capacity[<span class="number">0</span>]-=w[<span class="number">0</span>,m]</div><div class="line">        c[<span class="number">0</span>,tags[<span class="number">0</span>,i]]=<span class="number">1</span></div><div class="line">        cnt = cnt+<span class="number">1</span></div><div class="line"></div><div class="line">    <span class="keyword">if</span> capacity[<span class="number">0</span>]&lt;<span class="number">0</span>:</div><div class="line">        c[<span class="number">0</span>,tags[<span class="number">0</span>,cnt<span class="number">-1</span>]]=<span class="number">0</span></div><div class="line">        capacity[<span class="number">0</span>]=capacity[<span class="number">0</span>]+w[<span class="number">0</span>,tags[<span class="number">0</span>,cnt<span class="number">-1</span>]]</div><div class="line"></div><div class="line">c=c.reshape(nrows,<span class="number">1</span>)</div><div class="line">b=np.dot(v,c)</div><div class="line">r=np.dot(w,c)</div><div class="line"><span class="keyword">print</span> r</div><div class="line"><span class="keyword">print</span> b</div><div class="line"></div><div class="line"><span class="string">''' local search '''</span></div><div class="line">capacity = np.array([<span class="number">5555</span>])</div><div class="line"><span class="keyword">for</span> item <span class="keyword">in</span> range(<span class="number">10000</span>):</div><div class="line">    x=np.random.randint(<span class="number">0</span>,<span class="number">9999</span>)</div><div class="line">    c[x,<span class="number">0</span>]=<span class="number">1</span></div><div class="line">    c[x+<span class="number">1</span>,<span class="number">0</span>]=<span class="number">0</span></div><div class="line">    l=np.dot(v,c)</div><div class="line">    r=np.dot(w,c)</div><div class="line">    <span class="keyword">if</span> r[<span class="number">0</span>,<span class="number">0</span>]&lt;=capacity[<span class="number">0</span>]:</div><div class="line">        <span class="keyword">if</span> l[<span class="number">0</span>,<span class="number">0</span>]&gt;b[<span class="number">0</span>,<span class="number">0</span>]:</div><div class="line">            b[<span class="number">0</span>,<span class="number">0</span>]=l[<span class="number">0</span>,<span class="number">0</span>]</div><div class="line"><span class="keyword">print</span> b[<span class="number">0</span>,<span class="number">0</span>]</div></pre></td></tr></table></figure>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢老板<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/apay1.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/wpay1.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -190,225 +221,135 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://neuml.com/2017/11/23/blog/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/11/现代优化计算方法听课笔记——第二课/" class="archive-article-date">
-  	<time datetime="2017-11-10T23:00:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-10</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2017/11/11/现代优化计算方法听课笔记——第二课/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">《现代优化计算方法》听课笔记——第二课</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/11/现代优化计算方法听课笔记——第二课/">《现代优化计算方法》听课笔记——第二课</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">现代优化计算方法</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">听课笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    No Content
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/09/现代优化计算方法听课笔记——第一课/" class="archive-article-date">
-  	<time datetime="2017-11-08T21:14:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-08</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/09/现代优化计算方法听课笔记——第一课/">《现代优化计算方法》听课笔记——第一课</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">现代优化计算方法</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">听课笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/10/16/Deep-Learning-framework/" class="archive-article-date">
-  	<time datetime="2017-10-16T00:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-16</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/16/Deep-Learning-framework/">Deep Learning Framework</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">DeepLearning</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Frame</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/10/10/machine-learning-summary/" class="archive-article-date">
-  	<time datetime="2017-10-10T10:30:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/10/machine-learning-summary/">Machine Learning Summary</a>
-    </h1>
+    <section id="comments">
+      <div id="disqus_thread"></div>
+        <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'swiftmy'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </section>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Summary</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">MachineLearning</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/10/09/hello-world/" class="archive-article-date">
-  	<time datetime="2017-10-09T00:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-09</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/09/hello-world/">Hello Machine Learning</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Introduction</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -431,8 +372,8 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
