@@ -6,12 +6,12 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://neuml.com">
-  <title>neu machine learning</title>
+  <title>Archives: 2017/12 | neu machine learning</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="a space where anyone can discuss the machine learning including deep learning">
 <meta property="og:type" content="website">
 <meta property="og:title" content="neu machine learning">
-<meta property="og:url" content="http://neuml.com/index.html">
+<meta property="og:url" content="http://neuml.com/archives/2017/12/index.html">
 <meta property="og:site_name" content="neu machine learning">
 <meta property="og:description" content="a space where anyone can discuss the machine learning including deep learning">
 <meta property="og:locale" content="zh-CN">
@@ -147,35 +147,34 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="[post]-现代优化计算方法-遗传算法解决TSP问题" class="article article-type-[post]  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
+  
     
-      <header class="article-header">
-        
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2017" class="archive-year">2017</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-[post]">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2017/12/04/现代优化计算方法-遗传算法解决TSP问题/" class="archive-article-date">
+  	<time datetime="2017-12-04T12:47:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-04</time>
+</a>
+        </div>
+    	 
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/12/04/现代优化计算方法-遗传算法解决TSP问题/">现代优化计算方法-遗传算法解决TSP问题</a>
+      <a class="archive-article-title" href="/2017/12/04/现代优化计算方法-遗传算法解决TSP问题/">现代优化计算方法-遗传算法解决TSP问题</a>
     </h1>
   
 
-        
-        <a href="/2017/12/04/现代优化计算方法-遗传算法解决TSP问题/" class="archive-article-date">
-  	<time datetime="2017-12-04T12:47:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-04</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="遗传算法解决TSP问题"><a href="#遗传算法解决TSP问题" class="headerlink" title="遗传算法解决TSP问题"></a>遗传算法解决TSP问题</h2><p>用遗传算法(GA)解决TSP问题，也就是第一个大作业的简单版本。数据来源<a href="http://comopt.ifi.uni-heidelberg.de/software/TSPLIB95/" target="_blank" rel="external">tsplib</a>中的aat48，48个城市，对称型TSP问题，最优解为10628。<br>下面为java代码和详细注释：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div><div class="line">170</div><div class="line">171</div><div class="line">172</div><div class="line">173</div><div class="line">174</div><div class="line">175</div><div class="line">176</div><div class="line">177</div><div class="line">178</div><div class="line">179</div><div class="line">180</div><div class="line">181</div><div class="line">182</div><div class="line">183</div><div class="line">184</div><div class="line">185</div><div class="line">186</div><div class="line">187</div><div class="line">188</div><div class="line">189</div><div class="line">190</div><div class="line">191</div><div class="line">192</div><div class="line">193</div><div class="line">194</div><div class="line">195</div><div class="line">196</div><div class="line">197</div><div class="line">198</div><div class="line">199</div><div class="line">200</div><div class="line">201</div><div class="line">202</div><div class="line">203</div><div class="line">204</div><div class="line">205</div><div class="line">206</div><div class="line">207</div><div class="line">208</div><div class="line">209</div><div class="line">210</div><div class="line">211</div><div class="line">212</div><div class="line">213</div><div class="line">214</div><div class="line">215</div><div class="line">216</div><div class="line">217</div><div class="line">218</div><div class="line">219</div><div class="line">220</div><div class="line">221</div><div class="line">222</div><div class="line">223</div><div class="line">224</div><div class="line">225</div><div class="line">226</div><div class="line">227</div><div class="line">228</div><div class="line">229</div><div class="line">230</div><div class="line">231</div><div class="line">232</div><div class="line">233</div><div class="line">234</div><div class="line">235</div><div class="line">236</div><div class="line">237</div><div class="line">238</div><div class="line">239</div><div class="line">240</div><div class="line">241</div><div class="line">242</div><div class="line">243</div><div class="line">244</div><div class="line">245</div><div class="line">246</div><div class="line">247</div><div class="line">248</div><div class="line">249</div><div class="line">250</div><div class="line">251</div><div class="line">252</div><div class="line">253</div><div class="line">254</div><div class="line">255</div><div class="line">256</div><div class="line">257</div><div class="line">258</div><div class="line">259</div><div class="line">260</div><div class="line">261</div><div class="line">262</div><div class="line">263</div><div class="line">264</div><div class="line">265</div><div class="line">266</div><div class="line">267</div><div class="line">268</div><div class="line">269</div><div class="line">270</div><div class="line">271</div><div class="line">272</div><div class="line">273</div><div class="line">274</div><div class="line">275</div><div class="line">276</div><div class="line">277</div><div class="line">278</div><div class="line">279</div><div class="line">280</div><div class="line">281</div><div class="line">282</div><div class="line">283</div><div class="line">284</div><div class="line">285</div><div class="line">286</div><div class="line">287</div><div class="line">288</div><div class="line">289</div><div class="line">290</div><div class="line">291</div><div class="line">292</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> genetic_alogrithms;</div><div class="line"></div><div class="line"><span class="keyword">import</span> java.io.BufferedReader;</div><div class="line"><span class="keyword">import</span> java.io.FileInputStream;</div><div class="line"><span class="keyword">import</span> java.io.FileNotFoundException;</div><div class="line"><span class="keyword">import</span> java.io.IOException;</div><div class="line"><span class="keyword">import</span> java.io.InputStreamReader;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">GA</span> </span>&#123;</div><div class="line">	<span class="keyword">private</span> <span class="keyword">int</span> POPsize; <span class="comment">//种群大小</span></div><div class="line">	<span class="keyword">private</span> <span class="keyword">int</span> CITYnum; <span class="comment">//城市数量</span></div><div class="line">	<span class="keyword">private</span> <span class="keyword">int</span> Iteration; <span class="comment">//迭代次数</span></div><div class="line">	<span class="keyword">private</span> <span class="keyword">double</span> [][] Distance; <span class="comment">//城市间的距离矩阵</span></div><div class="line">	<span class="keyword">private</span> <span class="keyword">int</span> [] Bestsolution; <span class="comment">//最优解数组</span></div><div class="line">	<span class="keyword">private</span> <span class="keyword">double</span> Bestlength; <span class="comment">//最佳长度</span></div><div class="line">	<span class="keyword">private</span> <span class="keyword">double</span> [] Fitness; <span class="comment">// 适应度</span></div><div class="line">	<span class="keyword">private</span> <span class="keyword">int</span>[][] Fatherpop; <span class="comment">//父代种群</span></div><div class="line">	<span class="keyword">private</span> <span class="keyword">int</span>[][] Offspringpop; <span class="comment">//子代种群</span></div><div class="line">	<span class="keyword">private</span> <span class="keyword">double</span>[] Pa; <span class="comment">//累计概率</span></div><div class="line">	<span class="keyword">private</span> <span class="keyword">double</span> Pc; <span class="comment">//交叉概率</span></div><div class="line">	<span class="keyword">private</span> <span class="keyword">double</span> Pm; <span class="comment">//变异概率</span></div><div class="line">	<span class="keyword">private</span> <span class="keyword">int</span> t; <span class="comment">//当前的代数</span></div><div class="line">	<span class="keyword">private</span> <span class="keyword">int</span> bestT; <span class="comment">//最佳路径出现的代数</span></div><div class="line">	</div><div class="line">	<span class="comment">// 构造函数</span></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="title">GA</span><span class="params">(<span class="keyword">int</span> POPsize,<span class="keyword">int</span> CITYnum,<span class="keyword">int</span> Iteration,<span class="keyword">double</span> Pc,<span class="keyword">double</span> Pm)</span></span>&#123;</div><div class="line">		<span class="keyword">this</span>.POPsize = POPsize;</div><div class="line">		<span class="keyword">this</span>.CITYnum = CITYnum;</div><div class="line">		<span class="keyword">this</span>.Iteration = Iteration;</div><div class="line">		<span class="keyword">this</span>.Pc = Pc;</div><div class="line">		<span class="keyword">this</span>.Pm = Pm;	</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="comment">// 读取数据</span></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">read_data</span><span class="params">(String filename)</span> <span class="keyword">throws</span> IOException</span>&#123;</div><div class="line">		<span class="keyword">int</span>[] x = <span class="keyword">new</span> <span class="keyword">int</span>[CITYnum]; <span class="comment">//定义x坐标</span></div><div class="line">		<span class="keyword">int</span>[] y = <span class="keyword">new</span> <span class="keyword">int</span>[CITYnum]; <span class="comment">//定义y坐标</span></div><div class="line">		Distance = <span class="keyword">new</span> <span class="keyword">double</span>[CITYnum][CITYnum]; <span class="comment">//定义距离矩阵</span></div><div class="line">		String strbuff;</div><div class="line">		<span class="meta">@SuppressWarnings</span>(<span class="string">"resource"</span>)</div><div class="line">		BufferedReader data = <span class="keyword">new</span> BufferedReader(<span class="keyword">new</span> InputStreamReader(<span class="keyword">new</span> FileInputStream(filename))); <span class="comment">//读取数据文件</span></div><div class="line">		<span class="comment">// 获得每个城市的坐标</span></div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;CITYnum;i++)&#123;</div><div class="line">			strbuff = data.readLine();</div><div class="line">			String[] s = strbuff.split(<span class="string">" "</span>); <span class="comment">//数据之间有空格</span></div><div class="line">			x[i] = Integer.valueOf(s[<span class="number">1</span>]); <span class="comment">//读取x坐标</span></div><div class="line">			y[i] = Integer.valueOf(s[<span class="number">2</span>]); <span class="comment">//读取y坐标</span></div><div class="line">		&#125;</div><div class="line">		<span class="comment">// 计算距离获得距离矩阵</span></div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;CITYnum;i++)&#123;</div><div class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;CITYnum;j++)&#123;</div><div class="line">				<span class="keyword">double</span> Dij = Math.sqrt(((Math.pow(x[i]-x[j], <span class="number">2</span>))+(Math.pow(y[i]-y[j], <span class="number">2</span>)))/<span class="number">10.0</span>); <span class="comment">//距离计算公式</span></div><div class="line">				Distance[i][j] = Dij;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		<span class="comment">// 测试数据是否读入</span></div><div class="line"><span class="comment">//		for(int i=0;i&lt;48;i++)&#123;</span></div><div class="line"><span class="comment">//			for(int j=0;j&lt;48;j++)&#123;</span></div><div class="line"><span class="comment">//				System.out.println(Distance[i][j]);</span></div><div class="line"><span class="comment">//			&#125;</span></div><div class="line"><span class="comment">//		&#125;</span></div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="comment">// 初始化种群</span></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">initGroup</span><span class="params">()</span></span>&#123;</div><div class="line">		<span class="comment">// 初始化</span></div><div class="line">		Fatherpop = <span class="keyword">new</span> <span class="keyword">int</span>[POPsize][CITYnum];</div><div class="line">		Offspringpop = <span class="keyword">new</span> <span class="keyword">int</span>[POPsize][CITYnum];</div><div class="line">		Bestsolution = <span class="keyword">new</span> <span class="keyword">int</span>[CITYnum];</div><div class="line">		Fitness = <span class="keyword">new</span> <span class="keyword">double</span>[POPsize];</div><div class="line">		Pa = <span class="keyword">new</span> <span class="keyword">double</span>[POPsize];</div><div class="line">		Bestlength = Integer.MAX_VALUE;</div><div class="line">		t = <span class="number">0</span>;</div><div class="line">		<span class="keyword">int</span> i,j,k;</div><div class="line">		<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;POPsize;i++)&#123;</div><div class="line">			<span class="keyword">for</span>(j=<span class="number">0</span>;j&lt;CITYnum;)&#123;</div><div class="line">				Fatherpop[i][j] = (<span class="keyword">int</span>) (Math.random()*<span class="number">48</span>); <span class="comment">//父代随机赋值[0,48)</span></div><div class="line">				<span class="comment">// 判断是否有重复元素</span></div><div class="line">				<span class="keyword">for</span>(k=<span class="number">0</span>;k&lt;j;k++)&#123;</div><div class="line">					<span class="keyword">if</span>(Fatherpop[i][k]==Fatherpop[i][j])&#123; </div><div class="line">						<span class="keyword">break</span>;</div><div class="line">					&#125;</div><div class="line">				&#125;</div><div class="line">				<span class="keyword">if</span>(k==j)&#123;</div><div class="line">					j++;</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="comment">// 计算出每个染色体所代表的距离数值</span></div><div class="line">		<span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">getDistance</span><span class="params">(<span class="keyword">int</span>[] chromosome)</span></span>&#123;</div><div class="line">			<span class="keyword">double</span> length = <span class="number">0.0</span>;</div><div class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;CITYnum;i++)&#123;</div><div class="line">				length += Distance[chromosome[i-<span class="number">1</span>]][chromosome[i]]; <span class="comment">//得到中间城市的距离</span></div><div class="line">			&#125;</div><div class="line">			length += Distance[chromosome[CITYnum-<span class="number">1</span>]][chromosome[<span class="number">0</span>]]; <span class="comment">//首尾城市的距离</span></div><div class="line">			<span class="keyword">return</span> length;</div><div class="line">		&#125;</div><div class="line">	</div><div class="line">	<span class="comment">// 得到每个染色体的适应度数组</span></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">getFitness</span><span class="params">()</span></span>&#123;</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;POPsize;i++)&#123;</div><div class="line">			Fitness[i] = getDistance(Fatherpop[i]);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="comment">// 计算累积概率</span></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">getPa</span><span class="params">()</span></span>&#123;</div><div class="line">		<span class="keyword">double</span> TotalFitness = <span class="number">0</span>; <span class="comment">//定义种群的总的适应度</span></div><div class="line">		<span class="keyword">double</span>[] fit = <span class="keyword">new</span> <span class="keyword">double</span>[POPsize];</div><div class="line">		<span class="comment">// 计算出总适应度</span></div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;POPsize;i++)&#123;</div><div class="line">			fit[i] = <span class="number">10.0</span>/Fitness[i];</div><div class="line">			TotalFitness += fit[i];</div><div class="line">		&#125;</div><div class="line">		<span class="comment">// 计算累积概率</span></div><div class="line">		Pa[<span class="number">0</span>] = fit[<span class="number">0</span>]/TotalFitness;</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;POPsize;j++)&#123;</div><div class="line">			Pa[j] = (fit[j]/TotalFitness) + Pa[j-<span class="number">1</span>];</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="comment">// 复制染色体</span></div><div class="line">		<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">copyChromosome</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span>&#123;</div><div class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;CITYnum;i++)&#123;</div><div class="line">				Offspringpop[a][i] = Fatherpop[b][i];</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">	</div><div class="line">	<span class="comment">// 轮盘赌选择</span></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">STW</span><span class="params">()</span></span>&#123;</div><div class="line">		<span class="keyword">int</span> selectID; <span class="comment">//选中的父代染色体编号</span></div><div class="line">		<span class="keyword">int</span> i ,j;  <span class="comment">//i为子代染色体编号</span></div><div class="line">		<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;POPsize;i++)&#123;</div><div class="line">			<span class="keyword">double</span> p = Math.random();</div><div class="line">			<span class="keyword">for</span>(j=<span class="number">0</span>;j&lt;POPsize;j++)&#123;</div><div class="line">				<span class="keyword">if</span>(p &lt;= Pa[j])&#123;</div><div class="line">					<span class="keyword">break</span>;</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">			selectID = j;</div><div class="line">			copyChromosome(i,selectID); <span class="comment">//把父代选中的染色体复制给子代</span></div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="comment">// 选择最好的个体</span></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">selectBest</span><span class="params">()</span></span>&#123;</div><div class="line">		<span class="keyword">double</span> best;</div><div class="line">		<span class="keyword">int</span> bestID = <span class="number">0</span>;</div><div class="line">		<span class="comment">// 获得最好个体的适应度</span></div><div class="line">		best = Fitness[<span class="number">0</span>];</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;POPsize;i++)&#123;</div><div class="line">			<span class="keyword">if</span>(best&gt;Fitness[i])&#123;</div><div class="line">				best = Fitness[i];</div><div class="line">				bestID = i;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		<span class="comment">// 获得出现最好的染色体出现的代数</span></div><div class="line">		<span class="keyword">if</span>(Bestlength&gt;best)&#123;</div><div class="line">			Bestlength = best;</div><div class="line">			bestT = t; </div><div class="line">		&#125;</div><div class="line">		<span class="comment">// 获得最佳的染色体</span></div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;CITYnum;i++)&#123;</div><div class="line">			Bestsolution[i] = Fatherpop[bestID][i];</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="comment">// 交叉算子</span></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">crossover</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span>&#123;</div><div class="line">		<span class="keyword">int</span> rank1,rank2,i,j,flag,k;</div><div class="line">		rank1 = (<span class="keyword">int</span>) (Math.random()*<span class="number">48</span>);</div><div class="line">		rank2 = (<span class="keyword">int</span>) (Math.random()*<span class="number">48</span>);</div><div class="line">		<span class="keyword">int</span>[] chro1 = <span class="keyword">new</span> <span class="keyword">int</span>[CITYnum];</div><div class="line">		<span class="keyword">int</span>[] chro2 = <span class="keyword">new</span> <span class="keyword">int</span>[CITYnum];</div><div class="line">		</div><div class="line">		<span class="comment">// 得到chro1[]</span></div><div class="line">		<span class="comment">// 得到染色体b中和染色体a的(rank1)位置及其以后位置不相同的信息，一共有(rank1)个</span></div><div class="line">		<span class="keyword">for</span>(k=<span class="number">0</span>,j=<span class="number">0</span>;k&lt;CITYnum;k++)&#123;</div><div class="line">			chro1[j] = Offspringpop[b][k];</div><div class="line">			<span class="keyword">for</span>(i=rank1;i&lt;CITYnum;i++)&#123;</div><div class="line">				<span class="keyword">if</span>(Offspringpop[a][i] == chro1[j])&#123;</div><div class="line">					<span class="keyword">break</span>;</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">			<span class="keyword">if</span>(i == CITYnum)&#123;</div><div class="line">				j++;</div><div class="line">			&#125;</div><div class="line">	    &#125;</div><div class="line">		<span class="comment">// 将染色体a的rank1位置及其以后位置给chro1[]</span></div><div class="line">		flag = rank1;</div><div class="line">		<span class="keyword">for</span>(i=flag,j=flag;j&lt;CITYnum;i++,j++)&#123;</div><div class="line">			chro1[j] = Offspringpop[a][i];</div><div class="line">		&#125;</div><div class="line">		</div><div class="line">		<span class="comment">// 得到chro2[]</span></div><div class="line">		flag = rank2;</div><div class="line">		<span class="comment">// 得到a染色体不同于b染色体前rank2个的信息，为(rank2)个</span></div><div class="line">		<span class="keyword">for</span>(k=<span class="number">0</span>,j=<span class="number">0</span>;k&lt;CITYnum;k++)&#123;</div><div class="line">			chro2[j] = Offspringpop[a][k];</div><div class="line">			<span class="comment">// 确保每个编码不相同</span></div><div class="line">			<span class="keyword">for</span>(i=flag;i&lt;CITYnum;i++)&#123;</div><div class="line">				<span class="keyword">if</span>(Offspringpop[b][i] == chro2[j])&#123;</div><div class="line">					<span class="keyword">break</span>;</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">			<span class="keyword">if</span> (i == CITYnum)&#123;</div><div class="line">				j++;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		<span class="comment">// 将前b染色体中前rank2中的信息给到chro1[]中</span></div><div class="line">		<span class="keyword">for</span>(i=flag,j=flag;j&lt;CITYnum;j++,i++)&#123;</div><div class="line">			chro2[i] = Offspringpop[b][j];</div><div class="line">		&#125;</div><div class="line">		<span class="comment">// 得到交叉完成后的染色体</span></div><div class="line">		<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;CITYnum;i++)&#123;</div><div class="line">			Offspringpop[a][i] = chro1[i];</div><div class="line">			Offspringpop[b][i] = chro2[i];</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="comment">// 随机交换型变异</span></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">mutation</span><span class="params">(<span class="keyword">int</span> a)</span></span>&#123;</div><div class="line">		<span class="keyword">int</span> cnt,rank1,rank2,temp;</div><div class="line">		cnt = (<span class="keyword">int</span>)(Math.random()*<span class="number">48</span>); <span class="comment">//交换次数</span></div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;cnt;i++)&#123;</div><div class="line">			rank1 = (<span class="keyword">int</span>)(Math.random()*<span class="number">48</span>);</div><div class="line">			rank2 = (<span class="keyword">int</span>)(Math.random()*<span class="number">48</span>);</div><div class="line">			<span class="keyword">while</span>(rank1 == rank2)&#123;</div><div class="line">				rank2 = (<span class="keyword">int</span>)(Math.random()*<span class="number">48</span>);</div><div class="line">			&#125;</div><div class="line">			<span class="comment">// 交换</span></div><div class="line">			temp = Offspringpop[a][rank1];</div><div class="line">			Offspringpop[a][rank1] = Offspringpop[a][rank2];</div><div class="line">			Offspringpop[a][rank2] = temp;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="comment">// 进化（遗传+交叉+变异）</span></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">evolution</span><span class="params">()</span></span>&#123;</div><div class="line">		<span class="keyword">int</span> i;</div><div class="line">		<span class="keyword">double</span> p;</div><div class="line">		selectBest(); <span class="comment">//得到最好的路径、最好的长度、出现最好路径的代数</span></div><div class="line">		STW(); <span class="comment">//轮盘赌选择父代，获取子代</span></div><div class="line">		<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;POPsize;i=i+<span class="number">2</span>)&#123;</div><div class="line">			p = Math.random();</div><div class="line">			<span class="comment">// 是否交叉</span></div><div class="line">			<span class="keyword">if</span>(p&lt;Pc)&#123;</div><div class="line">				crossover(i,i+<span class="number">1</span>);</div><div class="line">				&#125;</div><div class="line">			p = Math.random();</div><div class="line">			<span class="comment">// 是否变异</span></div><div class="line">			<span class="keyword">if</span>(p&lt;Pm)&#123;</div><div class="line">			    mutation(i);</div><div class="line">				&#125;</div><div class="line">		    p = Math.random();</div><div class="line">			<span class="keyword">if</span>(p&lt;Pm)&#123;</div><div class="line">				mutation(i+<span class="number">1</span>);</div><div class="line">			    &#125;</div><div class="line">	     	&#125;</div><div class="line">		&#125;	</div><div class="line">	<span class="comment">// 遗传算法</span></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">ga</span><span class="params">()</span></span>&#123;</div><div class="line">		initGroup(); <span class="comment">//初始化种群</span></div><div class="line">		getFitness(); <span class="comment">//得到种群适应度</span></div><div class="line">		getPa(); <span class="comment">//得到累积概率</span></div><div class="line">		<span class="keyword">for</span>(t=<span class="number">0</span>;t&lt;Iteration;t++)&#123;</div><div class="line">			evolution(); <span class="comment">//进化 </span></div><div class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;POPsize;i++)&#123;</div><div class="line">				<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;CITYnum;j++)&#123;</div><div class="line">					Fatherpop[i][j] = Offspringpop[i][j]; <span class="comment">//将子代的信息给父代，准备下一次进化</span></div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">		 getFitness(); <span class="comment">//得到新一代种群的适应度</span></div><div class="line">		 getPa(); <span class="comment">//得到新一代种群的累积概率</span></div><div class="line">		&#125;</div><div class="line">		System.out.println(<span class="string">"最佳长度出现的代数："</span>+bestT);</div><div class="line">		System.out.println(<span class="string">"最佳长度："</span>+Bestlength);</div><div class="line">		System.out.print(<span class="string">"最佳路径："</span>);</div><div class="line">		<span class="comment">// 打印最佳路径</span></div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;CITYnum;i++)&#123;</div><div class="line">			System.out.print(Bestsolution[i]+<span class="string">" "</span>); </div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException </span>&#123;</div><div class="line">		GA g =<span class="keyword">new</span> GA(<span class="number">240</span>,<span class="number">48</span>,<span class="number">5000</span>,<span class="number">0.9</span>,<span class="number">0.2</span>); <span class="comment">//构造GA类</span></div><div class="line">		g.read_data(<span class="string">"/home/mouye/aat48.txt"</span>); <span class="comment">//读取数据</span></div><div class="line">		g.ga(); <span class="comment">//调用遗传算法</span></div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -191,526 +190,19 @@
 		</ul>
 	</div>
 
-      
+          
 
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/12/04/现代优化计算方法-遗传算法解决TSP问题/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
+        </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
-    <article id="post-blog" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
+  
+    </div></section>
+  
+
     
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/23/blog/">现代优化计算方法--背包问题</a>
-    </h1>
-  
-
-        
-        <a href="/2017/11/23/blog/" class="archive-article-date">
-  	<time datetime="2017-11-22T22:42:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-22</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="背包问题"><a href="#背包问题" class="headerlink" title="背包问题"></a>背包问题</h2><p>上次用的Java写的，存在很大的问题。这次用Python重新写了一下。<br>
-        
-          <a class="article-more-a" href="/2017/11/23/blog/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">背包问题</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/23/blog/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-现代优化计算方法听课笔记——第二课" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/11/现代优化计算方法听课笔记——第二课/">《现代优化计算方法》听课笔记——第二课</a>
-    </h1>
-  
-
-        
-        <a href="/2017/11/11/现代优化计算方法听课笔记——第二课/" class="archive-article-date">
-  	<time datetime="2017-11-10T23:00:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="绪论"><a href="#绪论" class="headerlink" title="绪论"></a>绪论</h2><hr>
-<p>1.旅行商问题（traveling salesman problem,TSP)</p>
-<p>2.约束机器排序（capacitated machine scheduling）问题</p>
-<p>3.时间复杂度分析</p>
-<p>4.领域的概念</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">现代优化计算方法</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">听课笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/11/现代优化计算方法听课笔记——第二课/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-现代优化计算方法听课笔记——第一课" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/09/现代优化计算方法听课笔记——第一课/">《现代优化计算方法》听课笔记——第一课</a>
-    </h1>
-  
-
-        
-        <a href="/2017/11/09/现代优化计算方法听课笔记——第一课/" class="archive-article-date">
-  	<time datetime="2017-11-08T21:14:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-08</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="课程概况"><a href="#课程概况" class="headerlink" title="课程概况"></a>课程概况</h2><hr>
-<ol>
-<li><strong>任课教师</strong><br>系统工程研究所：王大志<br>Email:wangdazhi1@ise.neu.edu.cn<br>Tel:18002455565</li>
-<li><strong>课程结构</strong><br>一、绪论<br>二、禁忌搜索算法<br>三、遗传算法<br>四、模拟退火算法<br>五、粒子群优化算法<br>六、蚁群优化算法</li>
-<li><strong>参考书籍</strong><br>1.《现代优化计算方法（第二版）》 刑文训 谢金星 编著  清华大学出版社（几乎绝版，淘宝价格200左右，所以请各位同学自行解决）<br>2.《智能优化方法》 汪定伟 编著  高等教育出版社  <a href="https://detail.tmall.com/item.htm?spm=a230r.1.14.1.12575727x27UyV&amp;id=557227889116&amp;ns=1&amp;abbucket=4" target="_blank" rel="external">淘宝链接</a> </li>
-<li><strong>考评形式</strong><br>课程出勤：20%<br>平时练习：20%<br>项目报告：60%（初步定在18周周五之前上交）
-        
-          <a class="article-more-a" href="/2017/11/09/现代优化计算方法听课笔记——第一课/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">现代优化计算方法</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">听课笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/09/现代优化计算方法听课笔记——第一课/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Deep-Learning-framework" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/10/16/Deep-Learning-framework/">Deep Learning Framework</a>
-    </h1>
-  
-
-        
-        <a href="/2017/10/16/Deep-Learning-framework/" class="archive-article-date">
-  	<time datetime="2017-10-16T00:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-16</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="深度学习主流框架"><a href="#深度学习主流框架" class="headerlink" title="深度学习主流框架"></a><strong>深度学习主流框架</strong></h2><p>深度学习作为机器学习一个重要分支，被大家普遍认为是通往人工智能的一个重要途径（其实是一门玄学）。在当今这个年代，去路上随便找一个人就能随口飙出几个深度学习相关的术语，手写几层神经网络。你说深度学习有多火？今天小编my向大家简单介绍一下深度学习的几个主流框架。</p>
-        
-          <a class="article-more-a" href="/2017/10/16/Deep-Learning-framework/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">DeepLearning</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Frame</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/10/16/Deep-Learning-framework/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-machine-learning-summary" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/10/10/machine-learning-summary/">Machine Learning Summary</a>
-    </h1>
-  
-
-        
-        <a href="/2017/10/10/machine-learning-summary/" class="archive-article-date">
-  	<time datetime="2017-10-10T10:30:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>2017年是公认的人工智能元年。随着计算能力和算法性能的提高，传统机器学习得到了快速的发展，在这里小编my将为大家简单介绍一下机器学习以及如何快速入门。</p>
-<h2 id="1-什么是机器学习"><a href="#1-什么是机器学习" class="headerlink" title="1. 什么是机器学习?"></a>1. 什么是机器学习?</h2><ul>
-<li>Arthur samuel(1959)：Machine learning is a field of computer science that gives computers the ability to learn without being explicitly programmed.</li>
-<li>Tom mithell(1998):A computer program is said to learn from experience E with respect to some class of tasks T and performance measure P if its performance at tasks in T, as measured by P, improves with experience E.（吴恩达在coursea上曾吐槽他觉得这个定义仅仅是为了押韵）</li>
-</ul>
-        
-          <a class="article-more-a" href="/2017/10/10/machine-learning-summary/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Summary</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">MachineLearning</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/10/10/machine-learning-summary/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/10/09/hello-world/">Hello Machine Learning</a>
-    </h1>
-  
-
-        
-        <a href="/2017/10/09/hello-world/" class="archive-article-date">
-  	<time datetime="2017-10-09T00:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-09</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>大家好，这里是东B大学自动化系的一名普通学生。希望大家喜欢我的博客，欢迎各路大神批评指正。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Introduction</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/10/09/hello-world/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-  
 
 
           </div>
@@ -732,9 +224,9 @@
     <script>
 	var yiliaConfig = {
 		mathjax: true,
-		isHome: true,
+		isHome: false,
 		isPost: false,
-		isArchive: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
