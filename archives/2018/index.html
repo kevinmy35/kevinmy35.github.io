@@ -6,20 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://neuml.com">
-  <title>现代优化计算方法-粒子群算法(PSO)简单实现 | neu machine learning</title>
+  <title>Archives: 2018 | neu machine learning</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="粒子群算法(PSO)简单复现用粒子群算法求解一个简单函数的最小值，下附Java代码">
-<meta name="keywords" content="PSO,函数优化">
-<meta property="og:type" content="article">
-<meta property="og:title" content="现代优化计算方法-粒子群算法(PSO)简单实现">
-<meta property="og:url" content="http://neuml.com/2017/12/16/现代优化计算方法-粒子群算法-PSO-简单实现/index.html">
+  <meta name="description" content="a space where anyone can discuss the machine learning including deep learning">
+<meta property="og:type" content="website">
+<meta property="og:title" content="neu machine learning">
+<meta property="og:url" content="http://neuml.com/archives/2018/index.html">
 <meta property="og:site_name" content="neu machine learning">
-<meta property="og:description" content="粒子群算法(PSO)简单复现用粒子群算法求解一个简单函数的最小值，下附Java代码">
+<meta property="og:description" content="a space where anyone can discuss the machine learning including deep learning">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-12-15T09:57:09.704Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="现代优化计算方法-粒子群算法(PSO)简单实现">
-<meta name="twitter:description" content="粒子群算法(PSO)简单复现用粒子群算法求解一个简单函数的最小值，下附Java代码">
+<meta name="twitter:title" content="neu machine learning">
+<meta name="twitter:description" content="a space where anyone can discuss the machine learning including deep learning">
   
     <link rel="alternative" href="/atom.xml" title="neu machine learning" type="application/atom+xml">
   
@@ -147,219 +145,64 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-现代优化计算方法-粒子群算法-PSO-简单实现" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      现代优化计算方法-粒子群算法(PSO)简单实现
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2018" class="archive-year">2018</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2018/01/12/现代优化计算方法结课作业—多维背包问题/" class="archive-article-date">
+  	<time datetime="2018-01-12T12:58:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-12</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2018/01/12/现代优化计算方法结课作业—多维背包问题/">现代优化计算方法结课作业—多维背包问题</a>
     </h1>
   
 
-        
-        <a href="/2017/12/16/现代优化计算方法-粒子群算法-PSO-简单实现/" class="archive-article-date">
-  	<time datetime="2017-12-15T17:53:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-15</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="粒子群算法-PSO-简单复现"><a href="#粒子群算法-PSO-简单复现" class="headerlink" title="粒子群算法(PSO)简单复现"></a>粒子群算法(PSO)简单复现</h2><p>用粒子群算法求解一个简单函数的最小值，下附Java代码<br><a id="more"></a><br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> pso;</div><div class="line"></div><div class="line"><span class="comment">/*</span></div><div class="line"><span class="comment"> *粒子群算法 </span></div><div class="line"><span class="comment"> *求解f=x*x+y*y的最小值，x的范围为[0,4),y的范围为[0,4)</span></div><div class="line"><span class="comment">*/</span></div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">PSO</span> </span>&#123;</div><div class="line">	<span class="keyword">private</span> <span class="keyword">double</span> c1;  <span class="comment">//学习因子c1</span></div><div class="line">	<span class="keyword">private</span> <span class="keyword">double</span> c2;  <span class="comment">//学习因子c2 </span></div><div class="line">	<span class="keyword">private</span> <span class="keyword">double</span> w;  <span class="comment">//惯性权重</span></div><div class="line">	<span class="keyword">private</span> <span class="keyword">double</span> globalbest;  <span class="comment">//整个粒子群历史最优解</span></div><div class="line">	<span class="keyword">private</span> <span class="keyword">double</span>[] presentbest;  <span class="comment">//单个粒子历史最优解</span></div><div class="line">	<span class="keyword">private</span> <span class="keyword">int</span> num;  <span class="comment">//粒子数量</span></div><div class="line">	<span class="keyword">private</span> <span class="keyword">int</span> n;  <span class="comment">//迭代次数</span></div><div class="line">	<span class="keyword">private</span> <span class="keyword">double</span>[] positionx;  <span class="comment">//粒子群数组</span></div><div class="line">	<span class="keyword">private</span> <span class="keyword">double</span>[] positiony; <span class="comment">//粒子群数组</span></div><div class="line">	<span class="keyword">private</span> <span class="keyword">double</span> Vmax;  <span class="comment">//粒子最大速度</span></div><div class="line">	<span class="keyword">private</span> <span class="keyword">double</span>[] v;  <span class="comment">//粒子群速度数组</span></div><div class="line">	</div><div class="line">	<span class="comment">//构造函数</span></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="title">PSO</span><span class="params">(<span class="keyword">double</span> c1, <span class="keyword">double</span> c2, <span class="keyword">double</span> w, <span class="keyword">int</span> num, <span class="keyword">int</span> n)</span> </span>&#123;</div><div class="line">		<span class="keyword">this</span>.c1 = c1;</div><div class="line">		<span class="keyword">this</span>.c2 = c2;</div><div class="line">		<span class="keyword">this</span>.w = w;</div><div class="line">		<span class="keyword">this</span>.num = num;</div><div class="line">		<span class="keyword">this</span>.n = n;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="comment">//初始化</span></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">init</span><span class="params">()</span></span>&#123;</div><div class="line">		positionx = <span class="keyword">new</span> <span class="keyword">double</span>[num];</div><div class="line">		positiony = <span class="keyword">new</span> <span class="keyword">double</span>[num];</div><div class="line">		presentbest = <span class="keyword">new</span> <span class="keyword">double</span>[num];</div><div class="line">		v = <span class="keyword">new</span> <span class="keyword">double</span>[num];</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;num;i++)&#123;</div><div class="line">			positionx[i] = (<span class="keyword">double</span>) Math.random()*<span class="number">4</span>;</div><div class="line">			positiony[i] = (<span class="keyword">double</span>) Math.random()*<span class="number">4</span>;</div><div class="line">			v[i] = (<span class="keyword">double</span>) Math.random();</div><div class="line">		    presentbest[i] = (<span class="keyword">double</span>) Integer.MAX_VALUE;</div><div class="line">		&#125;</div><div class="line">		globalbest = (<span class="keyword">double</span>) Integer.MAX_VALUE;</div><div class="line">		Vmax = <span class="number">4.0</span>;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="comment">//适值函数(即所要优化的函数）</span></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">getFitness</span><span class="params">(<span class="keyword">double</span> x,<span class="keyword">double</span> y)</span></span>&#123;</div><div class="line">		<span class="keyword">double</span> f = <span class="number">0</span>;</div><div class="line">		f = x*x + y*y;</div><div class="line">		<span class="keyword">return</span> f;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="comment">//粒子群算法</span></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">solve</span><span class="params">()</span></span>&#123;</div><div class="line">		System.out.println(<span class="string">"start..."</span>);</div><div class="line">		<span class="keyword">int</span> m = <span class="number">0</span>;  <span class="comment">//循环计数变量</span></div><div class="line">		<span class="keyword">double</span> vx = <span class="number">0</span>;  <span class="comment">//当前x维度的速度</span></div><div class="line">		<span class="keyword">double</span> vy = <span class="number">0</span>;  <span class="comment">//当前y维度的速度</span></div><div class="line">		init();  <span class="comment">//c初始化</span></div><div class="line">		<span class="keyword">do</span>&#123;</div><div class="line">			<span class="comment">//获取每个粒子的最优解</span></div><div class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;num;j++)&#123;</div><div class="line">				<span class="keyword">if</span>(presentbest[j]&gt;getFitness(positionx[j],positiony[j]))&#123;</div><div class="line">					presentbest[j] = getFitness(positionx[j],positiony[j]);</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">			<span class="comment">//h获取整个种群的最优解</span></div><div class="line">			<span class="keyword">double</span> min = presentbest[<span class="number">0</span>];</div><div class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;num;i++)&#123;</div><div class="line">				<span class="keyword">if</span>(presentbest[i]&lt;min)&#123;</div><div class="line">					min = presentbest[i];</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">			globalbest = min;</div><div class="line">			<span class="comment">//粒子群算法核心</span></div><div class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> k=<span class="number">0</span>;k&lt;num;k++)&#123;</div><div class="line">				vx = w*v[k] + c1*Math.random()*(presentbest[k]-positionx[k]) + c2*Math.random()*(globalbest-positionx[k]);</div><div class="line">				vy = w*v[k] + c1*Math.random()*(presentbest[k]-positiony[k]) + c2*Math.random()*(globalbest-positiony[k]);</div><div class="line">				<span class="comment">//判断是否超出最大速度</span></div><div class="line">				<span class="keyword">if</span>(vx&gt;Vmax)&#123;</div><div class="line">					vx = Vmax;</div><div class="line">				&#125;</div><div class="line">				<span class="keyword">if</span>(vy&gt;Vmax)&#123;</div><div class="line">					vy = Vmax;</div><div class="line">				&#125;</div><div class="line">				positionx[k] = positionx[k] + vx;</div><div class="line">				positiony[k] = positiony[k] + vy;</div><div class="line">			&#125;</div><div class="line">			<span class="comment">//每次迭代输出一次最优解</span></div><div class="line">			System.out.println(globalbest);</div><div class="line">			m++;</div><div class="line">		&#125;<span class="keyword">while</span>(m&lt;n);</div><div class="line">		<span class="comment">//输出最终最优解</span></div><div class="line">		System.out.println(<span class="string">"最优解为："</span>+globalbest);</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">		PSO pos = <span class="keyword">new</span> PSO(<span class="number">2</span>,<span class="number">2</span>,<span class="number">0.8</span>,<span class="number">15</span>,<span class="number">50</span>);</div><div class="line">		pos.solve();</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢老板<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/img/apay1.jpg">
-                      <span class="reward-type">支付宝</span>
-                    </div>
-                    
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/img/wpay1.png">
-                      <span class="reward-type">微信</span>
-                    </div>
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">PSO</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">GA</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">函数优化</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">多维背包问题</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://neuml.com/2017/12/16/现代优化计算方法-粒子群算法-PSO-简单实现/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2018/01/12/现代优化计算方法结课作业—多维背包问题/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          现代优化计算方法结课作业—多维背包问题
-        
-      </div>
-    </a>
   
   
-    <a href="/2017/12/09/现代优化计算方法-模拟退火解决TSP问题/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">现代优化计算方法-模拟退火算法解决TSP问题</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#粒子群算法-PSO-简单复现"><span class="toc-number">1.</span> <span class="toc-text">粒子群算法(PSO)简单复现</span></a></li></ol>
-                    </div>
-                </span>
-            </div>
-        </div>
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-    <section id="comments">
-      <div id="disqus_thread"></div>
-        <script type="text/javascript">
-        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-        var disqus_shortname = 'swiftmy'; // required: replace example with your forum shortname
-
-        /* * * DON'T EDIT BELOW THIS LINE * * */
-        (function() {
-          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
-      </script>
-      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    </section>
-  
-
-  
+    
 
 
           </div>
@@ -382,8 +225,8 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
